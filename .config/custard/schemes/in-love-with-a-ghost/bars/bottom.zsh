@@ -9,8 +9,8 @@ iconic_font="-Wuncon-Siji-Medium-R-Normal--10-100-75-75-c-80-iso10646-1"
 
 getsong() {
 
-    completion_color="#dc1566"
-    paused_color="#d7d787"
+    completion_color="#bc7252"
+    paused_color="$foreground_color"
 
     delimiter=" - "
 
