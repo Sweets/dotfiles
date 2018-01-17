@@ -1,0 +1,33 @@
+
+super + Escape
+    echo "reload config" > /tmp/custard.fifo
+
+super + Return
+    urxvt
+
+super + {Up,Down,Left,Right}
+    echo "move window {up,down,left,right}" > /tmp/custard.fifo
+
+super + {KP_Down,KP_Right}
+    echo "grow window {down,right}" > /tmp/custard.fifo
+
+super + {KP_Up,KP_Left}
+    echo "shrink window {up,left}" > /tmp/custard.fifo
+
+super + {_,shift + ,ctrl +,alt +}{1-9,0}
+    sh /users/sweets/.config/custard/helpers/{go-to,send-to,attach,detach}.sh {1-9,10}
+
+Print
+    (nougat -fc; notify-send "Screenshot saved")
+
+alt + Print
+    (nougat -c; notify-send "Screenshot saved")
+
+ctrl + Print
+    (screc -gr & notify-send "Recording screen")
+
+ctrl + alt + Print
+    (screc -gs & notify-send "Recording stopped")
+
+super + w
+    echo "close window" > /tmp/custard.fifo
