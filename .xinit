@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+xrandr --newmode "1920x1080"  138.50  1920 1968 2000 2080  1080 1083 1088 1118 +hsync -vsync
+xrandr --addmode VGA-0 "1920x1080"
+xrandr --output VGA-0 --mode "1920x1080" --output LVDS --off
+
+sh ~/.config/custard/start.sh "in-love-with-a-ghost"
