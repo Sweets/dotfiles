@@ -1,0 +1,78 @@
+!Xcursor.theme: DMZ-White
+URxvt*font: -ypn-envypn-Medium-R-Normal--13-130-75-75-C-90-ISO8859-1,-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+URxvt*boldFont: -ypn-envypn-Medium-R-Normal--13-130-75-75-C-90-ISO8859-1,-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+URxvt.scrollBar: false
+
+! special
+*.foreground:   #e69e87
+*.background:   #252422
+!#101214
+*.cursorColor:  #e69e87
+
+! black
+*.color0:       #1d1b1c
+*.color8:       #575c67
+
+! red
+*.color1:       #ca6c45
+*.color9:       #81230d
+
+! green
+*.color2:       #697a29
+*.color10:      #6e6c37
+
+! yellow
+*.color3:       #dcad2e
+*.color11:      #d4ad21
+
+! blue
+*.color4:       #ffffff
+*.color12:      #ffffff
+
+! magenta
+*.color5:       #ffffff
+*.color13:      #ffffff
+
+! cyan
+*.color6:       #6c7c89
+*.color14:      #869eac
+
+! white
+*.color7:       #dee5e0
+*.color15:      #f5f6ee
+
+URxvt*highlightColor: #e69e87
+URxvt*highlightTextColor: #252422
+
+URxvt.perl-lib: /home/sweets/.urxvt-util/
+URxvt.perl-ext-common: default,unichr,-selection
+! URxvt.perl-ext-common: default,clipboard,matcher,unichr,-selection
+URxvt.iso14755: False
+URxvt.iso14755_52: False
+URxvt.internalBorder: 32
+
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd: xclip -selection clipboard -i
+URxvt.clipboard.pastecmd: xclip -selection clipboard -o
+
+! Window manager configuration
+
+custard.rows: 8
+custard.columns: 6
+
+custard.border_type: Triple
+custard.border_size: 3
+
+custard.focused_color: #bc7252
+custard.unfocused_color: #80746f
+custard.background_color: #252422
+
+custard.margin: 32
+
+custard.margin_top: 32
+custard.margin_bottom: 32
+custard.margin_left: 0
+custard.margin_right: 0
+
+custard.workspaces: 5
