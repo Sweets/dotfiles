@@ -1,33 +1,54 @@
 
-super + Escape
-    echo "reload config" > /tmp/custard.fifo
-
 super + Return
     urxvt
 
 super + {Up,Down,Left,Right}
-    echo "move window {up,down,left,right}" > /tmp/custard.fifo
+    echo "window move {up,down,left,right};" > /tmp/custard.fifo
 
 super + {KP_Down,KP_Right}
-    echo "grow window {down,right}" > /tmp/custard.fifo
+    echo "window grow {down,right};" > /tmp/custard.fifo
 
 super + {KP_Up,KP_Left}
-    echo "shrink window {up,left}" > /tmp/custard.fifo
+    echo "window shrink {up,left};" > /tmp/custard.fifo
 
-super + {_,shift + ,ctrl +,alt +}{1-9,0}
-    sh /users/sweets/.config/custard/helpers/{go-to,send-to,attach,detach}.sh {1-9,10}
+super + {_,ctrl + ,alt +}{1-9,0}
+    echo "workspace {focus,attach,detach} {1-9,10};" > /tmp/custard.fifo
+
+super + shift + {1-9,0}
+    echo "window go to workspace {1-9,10};" > /tmp/custard.fifo
 
 Print
-    (nougat -fc; notify-send "Screenshot saved")
+    nougat -fuc
 
 alt + Print
-    (nougat -c; notify-send "Screenshot saved")
+    nougat -uc
 
-ctrl + Print
-    (screc -gr & notify-send "Recording screen")
+super + plus
+    echo "custard cycle focus forward;" > /tmp/custard.fifo
 
-ctrl + alt + Print
-    (screc -gs & notify-send "Recording stopped")
+super + minus
+    echo "custard cycle focus backward;" > /tmp/custard.fifo
 
 super + w
-    echo "close window" > /tmp/custard.fifo
+    echo "window close;" > /tmp/custard.fifo
+
+Pause
+    echo "custard stop;" > /tmp/custard.fifo
+
+F1
+    amixer set Master toggle
+
+F2
+    amixer set Master 5%-
+
+F3
+    amixer set Master 5%+
+
+F5
+    mpc prev
+
+F6
+    mpc toggle
+
+F7
+    mpc next
