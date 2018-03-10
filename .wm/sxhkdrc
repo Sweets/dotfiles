@@ -1,0 +1,66 @@
+
+super + Return
+    st
+
+super + {Up,Down,Left,Right}
+    custardctl window -move {up,down,left,right}
+
+super + {KP_Down,KP_Right}
+    custardctl window -expand {down,right}
+
+super + {KP_Up,KP_Left}
+    custardctl window -contract {up,left}
+
+super + {_,ctrl + ,alt +}{1-9,0}
+    (custardctl workspace -{focus,attach,detach} {1-9,10}; echo 'update' > /tmp/lemonbar/ws_monitor)
+
+super + shift + {1-9,0}
+    custardctl window -relocate {1-9,10}
+
+Print
+    /users/grace/.bin/nougat -fuc
+
+alt + Print
+    /users/grace/.bin/nougat -uc
+
+super + button8
+    custardctl -focus next
+
+super + button9
+    custardctl -focus prev
+
+super + Next
+    custardctl -focus next
+
+super + Prior
+    custardctl -focus prev
+
+super + minus
+    custardctl window -minimize
+
+super + plus
+    custardctl window -maximize
+
+super + w
+    custardctl window -close
+
+ctrl + alt + Delete
+    custardctl -stop
+
+F1
+    (amixer set Master toggle; echo 'update' > /tmp/lemonbar/vol_monitor)
+
+F2
+    (amixer set Master 5%-; echo 'update' > /tmp/lemonbar/vol_monitor)
+
+F3
+    (amixer set Master 5%+; echo 'update' > /tmp/lemonbar/vol_monitor)
+
+F5
+    mpc prev
+
+F6
+    mpc toggle
+
+F7
+    mpc next
