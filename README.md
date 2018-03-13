@@ -1,4 +1,4 @@
 # dotfiles
 my dotfiles for my desktop
 
-![desktop](https://raw.githubusercontent.com/Sweets/dotfiles/master/screenshots/floral.png)
+![desktop](https://i.imgur.com/Uvd4DSK.mp4)
