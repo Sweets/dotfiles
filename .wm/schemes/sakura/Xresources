@@ -1,0 +1,19 @@
+
+custard.rows: 8
+custard.columns: 6
+
+custard.border_type: Triple
+custard.border_size: 3
+
+custard.focused_color: #9b3c52
+custard.unfocused_color: #191719
+custard.background_color: #191719
+
+custard.margin: 32
+
+custard.margin_top: 32
+custard.margin_bottom: 32
+custard.margin_left: 0
+custard.margin_right: 0
+
+custard.workspaces: 5
